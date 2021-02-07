@@ -1,0 +1,23 @@
+repeat
+	tell application "BlueStacks" to activate
+	delay 1
+	do shell script "/usr/local/bin/MouseTools -x 1375 -y 300 -leftClick" -- ally help
+	delay 3
+	do shell script "/usr/local/bin/MouseTools -x 214 -y 397 -leftClick" -- heal
+	delay 3
+	do shell script "/usr/local/bin/MouseTools -x 1375 -y 703 -leftClick" -- Quick Select
+	delay 1
+	do shell script "/usr/local/bin/MouseTools -x 910 -y 436 -leftClick" -- top text field
+	delay 1
+	tell application "System Events" to tell application process "BlueStacks" to keystroke "783" -- 21:24 = 5 helps
+	tell application "System Events" to tell application process "BlueStacks" to key code 36 -- enter
+	delay 1
+	do shell script "/usr/local/bin/MouseTools -x 1375 -y 907 -leftClick" -- OK
+	delay 1
+	do shell script "/usr/local/bin/MouseTools -x 214 -y 397 -leftClick" -- ask for help
+	repeat 120 times
+		delay 3
+		do shell script "/usr/local/bin/MouseTools -x 1375 -y 300 -leftClick" -- ally help
+	end repeat
+	delay 10
+end repeat
